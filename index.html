@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audio Samples from PL-BERT</title>
+		<style>
+			div {
+			margin-bottom: 32px;
+			}
+			
+			.github.td {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			
+			#toc_container {
+			background: #f9f9f9 none repeat scroll 0 0;
+			border: 1px solid #aaa;
+			display: table;
+			font-size: 95%;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 8px;
+			width: auto;
+			}
+			
+			#toc_container ul  {
+			  list-style: outside none none !important; margin-left: -40px;
+			}
+			
+			.ood {
+			width: 245px;
+			}
+			
+			
+		  
+		</style>
+	</head>
+	
+	<body>
+		<article>
+			<header>
+				<h1>Audio Samples from "Phoneme-Level BERT for Enhanced Prosody of Text-to-Speech with Grapheme Predictions"</h1>
+			</header>
+		</article>
+		
+		<div style="margin-bottom: 16px;" class="github">
+			<table>
+					<tbody>
+						<tr>
+							<td><a href="#">[arXiv]</a></td>
+							<td><a href="#">[GitHub Repo]</a></td>
+							<td><a href="#">[Gradio Demo]</a></td>
+						</tr>
+					</tbody>
+			</table>
+		</div>
+		
+		
+		<div>
+			<b>Abstract:</b>  Large-scale pre-trained language models have been shown to be helpful in improving the naturalness of text-to-speech (TTS) models by enabling them to produce more naturalistic prosodic patterns. However, these models are usually word-level or sup-phoneme-level and jointly trained with phonemes, making them inefficient for the downstream TTS task where only phonemes are needed. In this work, we propose a phoneme-level BERT (PL-BERT) with a pretext task of predicting the corresponding graphemes along with the regular masked phoneme predictions. Subjective evaluations show that our phoneme-level BERT encoder has significantly improved the mean opinion scores (MOS) of rated naturalness of synthesized speech compared with the state-of-the-art (SOTA) StyleTTS baseline on out-of-distribution (OOD) texts.  
+				<p></p>
+				<div>
+					<table>
+						<tbody>
+						  <tr>
+							<th>StyleTTS w/ PL-BERT</th>
+							<th>StyleTTS w/o PL-BERT</th>
+						  </tr>
+						  <tr>
+							<td><audio controls preload="none"><source src="wavs/plbert/abstract.mp3"></audio></td>
+							<td><audio controls preload="none"><source src="wavs/styletts/abstract.mp3"></audio></td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+		</div>
+		
+		<div>
+			<p>This page contains a set of audio samples in support of the paper. Some examples are randomly selected directly from the sets we used for evaluation.</p>
+			<p><b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless otherwise specified. </b></p>
+			<p>For more samples, please go to our survey used for MOS evaluation <a href="https://survey.alchemer.com/s3/7079231/bert-ood-all">here</a>.</p>
+
+
+		</div>
+		
+		
+		<div>
+			<a name="lj"><h2>Out-of-distribution Examples</h2></a>
+			<hr>
+			<p>This section contains OOD examples that our subjective evaluation shows there is an improvemet with PL-BERT over those without it. We do not present the in-distribution examples here because our subjective evaluation shows that there is no significant improvement of BERT for in-distribution texts. 
+			</p>
+			
+
+			<p><b>Text: </b><i>"I'm seeing another Egyptian influence. The Yahwist rewriters were curiously pro-Egyptian and may be referencing the Egyptian serpent Apep, who represents Darkness and Chaos and is the great enemy of Amun-Ra."</i></p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>StyleTTS  w/ PL-BERT</th>
+					<th>StyleTTS  w/ MP-BERT</th>
+					<th>StyleTTS</th>
+					<th>VITS</th>
+					<th>FastSpeech 2</th>
+					<th>Tacotron 2</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/plbert/56.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/mxbert/56.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/styletts/56.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/vits/56.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/fastspeech/56.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/tacotron/56.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+			
+
+			<p><b>Text: </b><i>Obviously somebody was trying to tell me something, but although I tried, I could not make any sense of the messenger or the message.</i></p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>StyleTTS  w/ PL-BERT</th>
+					<th>StyleTTS  w/ MP-BERT</th>
+					<th>StyleTTS</th>
+					<th>VITS</th>
+					<th>FastSpeech 2</th>
+					<th>Tacotron 2</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/plbert/72.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/mxbert/72.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/styletts/72.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/vits/72.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/fastspeech/72.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/tacotron/72.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+			
+			<p><b>Text: </b><i>Cuthbert Dawkins urges us to share the searching and sensitivity of the young Africans. He urges us for the sake of those around us to be part of the flow of life-giving water which comes from Jesus.</i></p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>StyleTTS  w/ PL-BERT</th>
+					<th>StyleTTS  w/ MP-BERT</th>
+					<th>StyleTTS</th>
+					<th>VITS</th>
+					<th>FastSpeech 2</th>
+					<th>Tacotron 2</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/plbert/37.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/mxbert/37.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/styletts/37.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/vits/37.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/fastspeech/37.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/tacotron/37.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+			
+			
+			<p><b>Text: </b><i>"You should know I'm not afraid of hell. If there is one. You're dead and you haven't even left this house."</i></p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>StyleTTS  w/ PL-BERT</th>
+					<th>StyleTTS  w/ MP-BERT</th>
+					<th>StyleTTS</th>
+					<th>VITS</th>
+					<th>FastSpeech 2</th>
+					<th>Tacotron 2</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/plbert/3.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/mxbert/3.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/styletts/3.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/vits/3.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/fastspeech/3.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/tacotron/3.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+			
+			<p><b>Text: </b><i>"Let me go alone. I can climb the mountain faster by myself. I can examine the summit and report back to you. It may be safer if you stay within the trees. Maybe they'll help to shield you."</i></p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>StyleTTS  w/ PL-BERT</th>
+					<th>StyleTTS  w/ MP-BERT</th>
+					<th>StyleTTS</th>
+					<th>VITS</th>
+					<th>FastSpeech 2</th>
+					<th>Tacotron 2</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/plbert/95.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/mxbert/95.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/styletts/95.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/vits/95.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/fastspeech/95.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/tacotron/95.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div>
+			<a name="as"><h2>Ablation Study</h2></a>
+			<hr>
+			
+			<p><b>Text: </b><i>So there are some really big issues there that people like can confront if they fully feel that truth has this power to free and make you happy, rather than cause hurt.</i></p>
+			<table> 
+				<tbody>
+				  <tr>
+					<th>Baseline</th>
+					<th>w/o P2G Loss</th>
+					<th>w/o MLM Loss</th>
+					<th>w/o PL-BERT</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none"><source src="wavs/ablation/full1.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/novcab1.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/nomlm1.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/nobert1.wav"></audio></td>
+
+				  </tr>
+				</tbody>
+			</table>
+			
+			
+			<p><b>Text: </b><i>That night I did not sleep at all, struck by this new idea. All new strength had come to me from somewhere above. I felt that I had made another victory over my own self.</i></p>
+			<table> 
+				<tbody>
+				  <tr>
+					<th>Baseline</th>
+					<th>w/o P2G Loss</th>
+					<th>w/o MLM Loss</th>
+					<th>w/o PL-BERT</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none"><source src="wavs/ablation/full2.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/novcab2.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/nomlm2.wav"></audio></td>
+					<td><audio controls preload="none"><source src="wavs/ablation/nobert2.wav"></audio></td>
+
+				  </tr>
+				</tbody>
+			</table>
+
+
+			
+		</div>
+		
+	</body>
+	
+
+</html>
